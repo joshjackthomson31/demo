@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    sh 'docker build -t calculator .'
+                    docker.build("${DOCKER_IMAGE_NAME}",'.'}
                 }
             }
         }
