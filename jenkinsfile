@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE_NAME = 'calculator'
-        GITHUB_REPO_URL = 'https://github.com/chokshiyadav/Mini.git'
+        GITHUB_REPO_URL = 'https://github.com/joshjackthomson31/demo.git'
     }
 
     stages {
@@ -29,8 +29,8 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag calculator chokshi/calculator:latest'
-                    sh 'docker push chokshi/calculator:latest'
+                    sh 'docker tag calculator ijoshjackthomson/calculator:latest'
+                    sh 'docker push ijoshjackthomson/calculator:latest'
                     }
                  }
             }
